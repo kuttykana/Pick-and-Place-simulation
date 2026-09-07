@@ -1,0 +1,62 @@
+<mujoco model="watch_case_visual">
+  <default>
+    <default class="watch_case_visual_visual">
+      <geom group="2" type="mesh" contype="0" conaffinity="0"/>
+    </default>
+    <default class="watch_case_visual_collision">
+      <geom group="3" type="mesh"/>
+    </default>
+  </default>
+  <asset>
+    <texture type="2d" name="watch_case_basecolor" file="watch_case_basecolor.png"/>
+    <material name="watch_material" texture="watch_case_basecolor" specular="0.9" shininess="0.85" reflectance="0.4"/>
+    <mesh file="watch_case_visual.obj" scale="0.048 0.048 0.048"/>
+    <mesh file="watch_case_visual_collision_0.obj" scale="0.048 0.048 0.048"/>
+    <mesh file="watch_case_visual_collision_1.obj" scale="0.048 0.048 0.048"/>
+    <mesh file="watch_case_visual_collision_2.obj" scale="0.048 0.048 0.048"/>
+    <mesh file="watch_case_visual_collision_3.obj" scale="0.048 0.048 0.048"/>
+    <mesh file="watch_case_visual_collision_4.obj" scale="0.048 0.048 0.048"/>
+    <mesh file="watch_case_visual_collision_5.obj" scale="0.048 0.048 0.048"/>
+    <mesh file="watch_case_visual_collision_6.obj" scale="0.048 0.048 0.048"/>
+    <mesh file="watch_case_visual_collision_7.obj" scale="0.048 0.048 0.048"/>
+    <mesh file="watch_case_visual_collision_8.obj" scale="0.048 0.048 0.048"/>
+    <mesh file="watch_case_visual_collision_9.obj" scale="0.048 0.048 0.048"/>
+    <mesh file="watch_case_visual_collision_10.obj" scale="0.048 0.048 0.048"/>
+    <mesh file="watch_case_visual_collision_11.obj" scale="0.048 0.048 0.048"/>
+    <mesh file="watch_case_visual_collision_12.obj" scale="0.048 0.048 0.048"/>
+    <mesh file="watch_case_visual_collision_13.obj" scale="0.048 0.048 0.048"/>
+    <mesh file="watch_case_visual_collision_14.obj" scale="0.048 0.048 0.048"/>
+    <mesh file="watch_case_visual_collision_15.obj" scale="0.048 0.048 0.048"/>
+    <mesh file="watch_case_visual_collision_16.obj" scale="0.048 0.048 0.048"/>
+    <mesh file="watch_case_visual_collision_17.obj" scale="0.048 0.048 0.048"/>
+    <mesh file="watch_case_visual_collision_18.obj" scale="0.048 0.048 0.048"/>
+    <mesh file="watch_case_visual_collision_19.obj" scale="0.048 0.048 0.048"/>
+  </asset>
+  <worldbody>
+    <body name="watch_case_visual" pos="0.25 0 0.019">
+      <freejoint/>
+      <inertial pos="0 0 0" mass="0.028762" diaginertia="5.374927e-06 5.337253e-06 1.054696e-05"/>
+      <geom material="watch_material" mesh="watch_case_visual" class="watch_case_visual_visual"/>
+      <geom mesh="watch_case_visual_collision_0" rgba="0.05325881825499035 0.8927511801896928 0.4787246973617184 1" class="watch_case_visual_collision"/>
+      <geom mesh="watch_case_visual_collision_1" rgba="0.31276591546856247 0.8785357499476751 0.06058766816678529 1" class="watch_case_visual_collision"/>
+      <geom mesh="watch_case_visual_collision_2" rgba="0.6891610208010751 0.15037937344724428 0.38182968509441817 1" class="watch_case_visual_collision"/>
+      <geom mesh="watch_case_visual_collision_3" rgba="0.9041179260579856 0.18357150968453406 0.695734523132656 1" class="watch_case_visual_collision"/>
+      <geom mesh="watch_case_visual_collision_4" rgba="0.07022941126847071 0.8446066358728694 0.04093037967819502 1" class="watch_case_visual_collision"/>
+      <geom mesh="watch_case_visual_collision_5" rgba="0.3613166142554428 0.597900996662338 0.659844231993857 1" class="watch_case_visual_collision"/>
+      <geom mesh="watch_case_visual_collision_6" rgba="0.86255816103527 0.5383219999293835 0.20794955932362846 1" class="watch_case_visual_collision"/>
+      <geom mesh="watch_case_visual_collision_7" rgba="0.36072380823853434 0.7209928856158034 0.24088459087128022 1" class="watch_case_visual_collision"/>
+      <geom mesh="watch_case_visual_collision_8" rgba="0.2097126651157537 0.07772232465569429 0.07969129700051802 1" class="watch_case_visual_collision"/>
+      <geom mesh="watch_case_visual_collision_9" rgba="0.9475039517540743 0.21473734398818978 0.9313624263866619 1" class="watch_case_visual_collision"/>
+      <geom mesh="watch_case_visual_collision_10" rgba="0.22795235646192658 0.40656482077078426 0.7645054219125516 1" class="watch_case_visual_collision"/>
+      <geom mesh="watch_case_visual_collision_11" rgba="0.8613035579214423 0.502346581672686 0.49447735142737126 1" class="watch_case_visual_collision"/>
+      <geom mesh="watch_case_visual_collision_12" rgba="0.7417419103405894 0.6790897370133969 0.905676006137814 1" class="watch_case_visual_collision"/>
+      <geom mesh="watch_case_visual_collision_13" rgba="0.19397774464169482 0.22059606737226078 0.665259808959465 1" class="watch_case_visual_collision"/>
+      <geom mesh="watch_case_visual_collision_14" rgba="0.15396590784407604 0.016782932165947284 0.7942429955254907 1" class="watch_case_visual_collision"/>
+      <geom mesh="watch_case_visual_collision_15" rgba="0.4753160510100326 0.07119728650431023 0.8354250156517273 1" class="watch_case_visual_collision"/>
+      <geom mesh="watch_case_visual_collision_16" rgba="0.3312170329401992 0.40700219550994976 0.16024201948858774 1" class="watch_case_visual_collision"/>
+      <geom mesh="watch_case_visual_collision_17" rgba="0.1510321259007208 0.04928600202239486 0.8597682589176583 1" class="watch_case_visual_collision"/>
+      <geom mesh="watch_case_visual_collision_18" rgba="0.6058641185865743 0.5968972229719895 0.7176619887296156 1" class="watch_case_visual_collision"/>
+      <geom mesh="watch_case_visual_collision_19" rgba="0.6048950545702118 0.4191513798883185 0.27695496930172603 1" class="watch_case_visual_collision"/>
+    </body>
+  </worldbody>
+</mujoco>
