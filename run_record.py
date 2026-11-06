@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
 """
-Wrapper for lerobot-record so you never hand-type the multi-line bash
-command (and never hit the ${WRONG_VAR} problem again).
-
 Usage:
     python run_record.py                # record a new batch, push to Hub
     python run_record.py --resume       # resume the same dataset
@@ -15,19 +12,16 @@ import subprocess
 import sys
 
 
-# ---- Edit these to match your setup -----------------------------------
+# Edit these to match your setup 
 ROBOT_TYPE = "so101_follower"
 ROBOT_PORT = "/dev/ttyACM1"
 ROBOT_ID = "my_awesome_follower_arm"
-
 TELEOP_TYPE = "so101_leader"
 TELEOP_PORT = "/dev/ttyACM0"
 TELEOP_ID = "my_awesome_leader_arm"
 
 CAMERAS = {
-    # NOTE: "front" is actually the WRIST (gripper) camera.
-    # Keep the names "front" / "overhead" unchanged: the trained policy expects them.
-    # WSL can renumber /dev/video* after replugging. Run check_cameras.py each session.
+    # NOTE: use the conventional naming of "front" and "overhead" for the two cameras, so that the dataset can be used with the default camera selection in lerobot-dataset.
     "front": {  # wrist / gripper camera
         "type": "opencv",
         "index_or_path": "/dev/video4",
@@ -55,12 +49,11 @@ DATASET_ROOT = "~/watch-pickplace-sim/datasets/watch-pickplace-real"
 TASK_DESCRIPTION = "Pick up the watch and place it in the tray"
 EPISODES_PER_BATCH = 15
 
-# rerun's GPU viewer crashed on this WSL setup (R32Float texture format unsupported).
-# Default to no live viewer. Set to True + DISPLAY_MODE="foxglove" to try the
+# rerun's GPU viewer crashed on this WSL setup.
+# So set to True + DISPLAY_MODE="foxglove" to try the
 # browser-based viewer instead, which usually works better under WSL.
 DISPLAY_DATA = True
 DISPLAY_MODE = "foxglove"
-# -------------------------------------------------------------------------
 
 
 def get_hf_username() -> str:
